@@ -3,7 +3,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19+-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 
-A production-ready demonstration of real-time chat and interactive voting components powered by Vaultrice. **No backend required!**
+A production-ready demonstration of real-time chat and interactive voting components powered by [Vaultrice](https://www.vaultrice.com/blog/how-to-react-chat-starter). **No backend required!**
 
 ![preview](https://raw.githubusercontent.com/vaultrice/vaultrice-chat-starter/main/public/chat-starter.gif)
 
@@ -66,7 +66,7 @@ npm run lint     # Run ESLint
 
 ## 📚 **Key Components Demonstrated**
 
-### ChatRoom Component
+### [ChatRoom Component](https://github.com/vaultrice/react-components?tab=readme-ov-file#real-time-chat-room)
 ```tsx
 <ChatRoom
   id="unique-room-id"
@@ -78,7 +78,7 @@ npm run lint     # Run ESLint
 />
 ```
 
-### Voting Component
+### [Voting Component](https://github.com/vaultrice/react-components?tab=readme-ov-file#basic-voting)
 ```tsx
 <Voting
   id="unique-poll-id"
