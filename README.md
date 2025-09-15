@@ -3,7 +3,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19+-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 
-A production-ready demonstration of real-time chat and interactive voting components powered by [Vaultrice](https://www.vaultrice.com/blog/how-to-react-chat-starter). **No backend required!**
+A production-ready demonstration of real-time chat and interactive voting components powered by [Vaultrice](https://www.vaultrice.com/blog/how-to-react-chat-starter). **without building a backend**
 
 ![preview](https://raw.githubusercontent.com/vaultrice/vaultrice-chat-starter/main/public/chat-starter.gif)
 
@@ -54,6 +54,48 @@ npm start
 ```
 
 **🎉 Open multiple browser tabs to see real-time features in action!**
+
+## More production security
+
+**1. Configure Your Backend for Secure Authentication**
+For production security, it's preferred your `apiSecret` should not be exposed in your frontend app. The best practice is to have a simple backend endpoint that generates temporary access tokens.
+
+Create a serverless function or API endpoint (e.g., `api/vaultrice-token.js`) with the following logic:
+
+```javascript
+// This endpoint securely uses environment variables on your server
+import { retrieveAccessToken } from '@vaultrice/sdk';
+
+export async function GET(request) {
+  const accessToken = await retrieveAccessToken(
+    process.env.VAULTRICE_PROJECT_ID,
+    process.env.VAULTRICE_API_KEY,
+    process.env.VAULTRICE_API_SECRET
+  );
+  return Response.json({ accessToken });
+}
+```
+
+**2. Update Your Frontend Code**
+Now, update your `App.tsx` to use the `getAccessToken` function. This is the most secure and convenient way to authenticate.
+
+```tsx
+// In your React component
+import { ChatRoom } from '@vaultrice/react-components';
+
+<ChatRoom
+  id="team-chat-room"
+  user={currentUser}
+  credentials={{
+    projectId: "YOUR_PROJECT_ID",
+    // The SDK will call this function automatically to get tokens
+    getAccessToken: async () => {
+      const { accessToken } = await fetch('/api/vaultrice-token').then(r => r.json());
+      return accessToken;
+    }
+  }}
+/>
+```
 
 ## 🛠️ **Development Commands**
 
