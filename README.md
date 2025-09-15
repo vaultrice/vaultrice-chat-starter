@@ -58,7 +58,7 @@ npm start
 ## 🛠️ **Development Commands**
 
 ```bash
-npm star         # Start development server
+npm start        # Start development server
 npm run build    # Build for production
 npm run preview  # Preview production build
 npm run lint     # Run ESLint
