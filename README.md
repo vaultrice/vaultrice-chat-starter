@@ -115,4 +115,27 @@ MIT License - feel free to use this in your own projects!
 
 ---
 
+## 🤔 How is it 'No Backend'?
+
+When we say "no backend," we mean there is **no backend for you to build, manage, scale, or operate**.
+
+Vaultrice runs on a powerful, globally distributed, serverless infrastructure built on the Cloudflare stack. Your frontend application communicates directly and securely with our managed service. This gives you the power of a real-time backend without the operational complexity and cost.
+
+  * **You write:** Frontend code.
+  * **We manage:** The servers, databases, WebSocket connections, and scaling.
+
+## 🌱 Business Model & Sustainability
+
+We understand that building on a new platform requires trust. You want to be sure we'll be around for the long haul.
+
+Vaultrice is a bootstrapped, sustainable business built for longevity. Our model is simple and transparent:
+
+  * **Efficient by Design:** We're built on Cloudflare's highly-efficient serverless platform.
+  * **Generous Free Tier:** This efficiency allows us to offer a powerful free tier that is enough for prototypes, and getting started. Our free tier is not a temporary trial.
+  * **Sustainable Growth:** We are funded by our paid tiers for professional and enterprise users who need higher limits and advanced features. Our success is directly tied to the success of the developers who build on our platform.
+
+We're here to build a foundational piece of the real-time web, and we're committed to doing it sustainably.
+
+---
+
 **Built with ❤️ using [Vaultrice](https://www.vaultrice.com) - The fastest way to add real-time features to your app.**
